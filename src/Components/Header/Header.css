@@ -1,0 +1,34 @@
+.header-container{
+    padding: 20px 0;
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    font-size: 24px;
+}
+
+.header-container form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container input{
+    width: 50%;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header-container select{
+    height: 35px;
+    width: 5%;
+    margin-right: 10px;
+}
+
+.header-container button{
+    width: 10%;
+    height: 35px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 50%;
+}

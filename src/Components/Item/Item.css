@@ -1,0 +1,38 @@
+.item-container{
+    width: 70%;
+    height: 30%;
+    max-height: 300px;
+    display: flex;
+    flex-direction: row;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgb(56, 56, 56);
+}
+
+.item-container img{
+    max-height: 150px;
+    min-width: 150px;
+}
+
+.item-container h2{
+    font-size: 2vw;
+    margin: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+.item-container p{
+    font-size: 1.2vw;
+    color: rgb(82, 82, 82);
+    margin: 2px;
+}
+
+.item-container a{
+    font-size: 1.1vw;
+    margin: 2px;
+}
+
+.item-container div {
+    margin: auto 15px;
+    display: flex;
+    flex-direction: column;
+}
