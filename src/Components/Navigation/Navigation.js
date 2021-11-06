@@ -4,11 +4,7 @@ import React from 'react';
 export default class Navigation extends React.Component{
     constructor(props){
         super();
-        this.state = {
-
-        }
     }
-
 
     render(){
         return(
@@ -17,7 +13,5 @@ export default class Navigation extends React.Component{
                 <p className={100 - this.props.start === this.props.num ? 'navigation-container-nocursor' : 'navigation-container-cursor'}>Вперед</p>
             </div>
         )
-
-        
     }
 }
