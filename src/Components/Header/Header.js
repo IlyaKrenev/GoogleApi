@@ -4,13 +4,13 @@ import fetchRequest from '../../fetchRequest';
 
 export default class Header extends React.Component{
     constructor(props){
-        super();
+        super(props);
         this.inputRef = React.createRef();
         this.selectRef = React.createRef();
     }
 
     getResult = () => {
-        if (this.inputRef.current.value === '')
+        if (!this.inputRef.current.value)
             return;
         let buf = this.props.searchParams;
         buf.num = this.selectRef.current.value;

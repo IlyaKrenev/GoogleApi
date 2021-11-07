@@ -2,10 +2,6 @@ import './Navigation.css';
 import React from 'react';
 
 export default class Navigation extends React.Component{
-    constructor(props){
-        super();
-    }
-
     render(){
         return(
             <div className = 'navigation-container' onClick={this.props.onClick}>
