@@ -15,10 +15,10 @@ export default class App extends React.Component {
       start: 0,
       searchParams: {
         cx: '0feda4ea9cbd4332a',
-        key: 'AIzaSyAN47lCGVAaAHVYIJGxpDnDYs3UtYdTUno',
+        key: 'AIzaSyAUo4Jr7dfSjjDxphYAkM4BRtPtPB7XAlo',
         q: '',
         num: 0, // Количество item на странице
-        start: 0, // Начало запроса (в google - max 100)
+        start: 1, // Начало запроса (в google - max 100)
       }
     };
   }
@@ -38,15 +38,12 @@ export default class App extends React.Component {
       case 'Вперед':
         console.log(this.state.searchParams)
         if (event.target.classList.contains('navigation-container-cursor')) {
-
           this.setState({
             searchParams: {
               ...this.state.searchParams,
               start: +this.state.searchParams.start + +(this.state.searchParams.num),
             }
           }, this.getData)
-         
-          console.log(this.state.searchParams)
         }
         break;
 
@@ -58,8 +55,6 @@ export default class App extends React.Component {
               start: +this.state.searchParams.start - +(this.state.searchParams.num),
             }
           }, this.getData);
-
-          console.log(this.state.searchParams)
         }
         break;
       default:
@@ -71,6 +66,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
+      {console.log(this.state.searchResponse)}
         <Header searchResponse={this.getPageParams} searchParams={this.state.searchParams} />
         <div className='items-array'>
           {this.state.searchResponse.map(item => <Item item={item} key={item.link} />)}
