@@ -17,7 +17,7 @@ export default class App extends React.Component {
         cx: '0feda4ea9cbd4332a',
         key: 'AIzaSyAUo4Jr7dfSjjDxphYAkM4BRtPtPB7XAlo',
         q: '',
-        num: 0, // Количество item на странице
+        num: 0, // Количество item на странице (в google - max 10)
         start: 1, // Начало запроса (в google - max 100)
       }
     };
@@ -58,7 +58,6 @@ export default class App extends React.Component {
         }
         break;
       default:
-        console.log('default')
         break;
     }
   }
@@ -66,7 +65,6 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-      {console.log(this.state.searchResponse)}
         <Header searchResponse={this.getPageParams} searchParams={this.state.searchParams} />
         <div className='items-array'>
           {this.state.searchResponse.map(item => <Item item={item} key={item.link} />)}

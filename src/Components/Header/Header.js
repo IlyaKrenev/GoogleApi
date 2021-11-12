@@ -35,7 +35,7 @@ export default class Header extends React.Component{
                     <select ref={this.selectRef} onChange = {() => this.selectChangeFlag = 1}>
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(item => <option key={item}>{item}</option>)}
                     </select>
-                    <button onClick={this.getResult}>Найти текст</button>
+                    <button onClick={this.getResult}>Найти рецепт</button>
                 </form>
             </div>
         )
